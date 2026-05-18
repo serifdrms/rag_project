@@ -6,7 +6,10 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 import glob
 
-GROQ_API_KEY = "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"
+from dotenv import load_dotenv
+import os
+load_dotenv()
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # Verileri yükle
 documents = []
